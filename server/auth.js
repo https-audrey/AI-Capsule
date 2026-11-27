@@ -18,7 +18,8 @@ function jwtSecret() {
   if (!s) throw new Error("JWT_SECRET environment variable is not set");
   return s;
 }
-const isSecure = () => process.env.NODE_ENV === "production" || process.env.COOKIE_SECURE === "true";
+const isSecure = () =>
+  process.env.NODE_ENV === "production" || process.env.COOKIE_SECURE === "true" || Boolean(process.env.VERCEL);
 const cookieBase = () => ({ httpOnly: true, secure: isSecure(), sameSite: "lax", path: "/" });
 const githubUrls = () => ({
   authorize: process.env.GITHUB_AUTHORIZE_URL || "https://github.com/login/oauth/authorize",

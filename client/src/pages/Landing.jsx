@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getMe } from "../api";
+import BrandLogo from "../components/BrandLogo";
 import ThemeToggle from "../components/ThemeToggle";
 
 export default function Landing() {
@@ -22,9 +23,7 @@ export default function Landing() {
   return (
     <main className="landing-shell">
       <nav className="glass-nav">
-        <span className="logo">
-          <span className="logo-icon">◈</span> AI Capsule
-        </span>
+        <BrandLogo />
         <div className="nav-actions">
           <ThemeToggle />
           {user ? (

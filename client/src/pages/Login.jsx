@@ -1,4 +1,5 @@
 import { Link, useSearchParams } from "react-router-dom";
+import BrandLogo from "../components/BrandLogo";
 import ThemeToggle from "../components/ThemeToggle";
 
 export default function Login() {
@@ -8,18 +9,15 @@ export default function Login() {
   return (
     <main className="auth-shell">
       <div className="auth-topbar">
-        <Link to="/" className="logo">
-          <span className="logo-icon">◈</span> AI Capsule
+        <Link to="/" className="logo-link">
+          <BrandLogo />
         </Link>
         <ThemeToggle />
       </div>
 
       <section className="glass-card auth-card">
         <div className="auth-emblem" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 2L3 7v10l9 5 9-5V7l-9-5z" />
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 22V12m0 0l9-5m-9 5L3 7" />
-          </svg>
+          <img src="/logo.png" alt="" className="auth-emblem-img" />
         </div>
 
         <span className="eyebrow-pill">Private Workspace</span>

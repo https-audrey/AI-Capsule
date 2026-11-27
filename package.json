@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "AI Capsule - cloud-deployed AI prompt manager (React + Express + SQLite, GitHub OAuth + JWT)",
-  "engines": { "node": "22.x" },
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "build": "npm install --prefix client --include=dev && npm run build --prefix client",
     "start": "node server/index.js",

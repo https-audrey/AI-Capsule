@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as api from "../api";
-import BrandLogo from "../components/BrandLogo";
 import CapsuleCard from "../components/CapsuleCard";
 import CapsuleForm from "../components/CapsuleForm";
 import ConfirmDeleteModal from "../components/ConfirmDeleteModal";
@@ -215,7 +214,7 @@ export default function Dashboard() {
     <main className="page">
       <header className="glass-card topbar">
         <div className="topbar-brand">
-          <BrandLogo />
+          <span className="logo"><span className="logo-icon">◈</span> AI Capsule</span>
           <h1>Your prompt library</h1>
           {user && (
             <p className="muted user-badge-row">
